@@ -1,0 +1,8 @@
+table { width:980px; border-collapse: collapse; outline:2px solid #1f1603;}
+th,td,table {border:1px solid #444; padding:5px; text-align:center;}
+td > b {display:block; color:#333;}
+tr >td:not(:last-child):not(:first-child){color:red;}
+thead {background-color:rgb(242, 245, 84); }
+thead  th:last-child {width:200px;}
+caption h2 {color:#1f1603; margin:0; padding:10px; outline:2px solid #1f1603; background-color: rgb(212, 168, 22)}
+    

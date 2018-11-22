@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flexbox</title>
+    <style>
+    
+    body {margin: 0;}
+
+    header {
+        background-color: aquamarine;
+        height: 100px;
+
+    }
+
+    h1 {
+        text-align: center;
+        color:#fff;
+        line-height: 100px;
+        margin:0;
+    }
+
+    section {display:flex; flex-wrap:wrap;}
+    section > article { padding:10px; background-color: bisque; margin:10px; flex:200px;}
+
+    section > article:first-child {order:1;}
+
+    .dF { display:flex; flex-wrap: wrap;  flex-direction: row;}
+    .dF > * {flex:130px;}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>flex layout</h1>
+    </header>
+    <section>
+        <article>
+            <h2>first article</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae magni perferendis in ipsam velit similique. Suscipit nesciunt omnis accusamus dolor tenetur ratione vel saepe quia provident, porro in dicta placeat. </p>
+        </article>
+
+
+        <article>
+                <h2>second article</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae magni perferendis in ipsam velit similique. Suscipit nesciunt omnis accusamus dolor tenetur ratione vel saepe quia provident, porro in dicta placeat. </p>
+            </article>
+            <article>
+                    <h2>third article</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae magni perferendis in ipsam velit similique. Suscipit nesciunt omnis accusamus dolor tenetur ratione vel saepe quia provident, porro in dicta placeat. </p>
+                </article>
+
+                <article>
+                        <h2>first article</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae magni perferendis in ipsam velit similique. Suscipit nesciunt omnis accusamus dolor tenetur ratione vel saepe quia provident, porro in dicta placeat. </p>
+                    </article>
+            
+            
+                    <article>
+                            <h2>second article</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae magni perferendis in ipsam velit similique. Suscipit nesciunt omnis accusamus dolor tenetur ratione vel saepe quia provident, porro in dicta placeat. </p>
+                        </article>
+                        <article>
+                                <h2>third article</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae magni perferendis in ipsam velit similique. Suscipit nesciunt omnis accusamus dolor tenetur ratione vel saepe quia provident, porro in dicta placeat. </p>
+                            </article>
+
+                            <article>
+                                    <h2>first article</h2>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae magni perferendis in ipsam velit similique. Suscipit nesciunt omnis accusamus dolor tenetur ratione vel saepe quia provident, porro in dicta placeat. </p>
+                                </article>
+                        
+                        
+                                <article class="dF">
+                                        <h2> article with nested flex</h2>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae magni perferendis in ipsam velit similique. Suscipit nesciunt omnis accusamus dolor tenetur ratione vel saepe quia provident, porro in dicta placeat. </p>
+                                        <h2> article with nested flex</h2>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae magni perferendis in ipsam velit similique. Suscipit nesciunt omnis accusamus dolor tenetur ratione vel saepe quia provident, porro in dicta placeat. </p>
+                                  
+                                    </article>
+                                    <article>
+                                            <h2>third article</h2>
+                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae magni perferendis in ipsam velit similique. Suscipit nesciunt omnis accusamus dolor tenetur ratione vel saepe quia provident, porro in dicta placeat. </p>
+                                        </article>
+
+
+
+    </section>
+
+
+
+    <section class="sec-2">
+
+
+    </section>
+    
+</body>
+</html>

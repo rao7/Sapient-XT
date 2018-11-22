@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aghoda Layout</title>
+    <style>
+     html , body { margin:0; padding:0;}
+    
+    ul {list-style: none; padding:0;}
+
+     .oLine { outline: 1px solid red;}
+
+     
+     .float--left { float:left;}
+     .float--right { float:right;}
+     .clear:after { content:""; display:block; clear:both; }
+
+     header > * , nav > ul> li{ display: inline-block; vertical-align: middle; }
+     nav > ul> li {padding:10px; margin-right:10px;}
+     header > figure {font-size: 22px; color:#333;}
+
+    
+    section.top {  background-color: #f68a73; min-height:200px; color:#fff; }
+    .top .col-1 ,  .top .col-2 { width:650px; min-height: 200px; margin-left:50px;}
+
+
+    .form > input ,  select{ padding:20px 10px; width: 600px; font-size:20px; margin-top:20px; }
+    .form > select {width:400px; border:0;}
+    .form > input[type="button"] {width:200px; margin-left:22px; background-color: dodgerblue; border:0; }
+
+    .a1 , .a2 , .a3 { min-height:200px; } 
+    .a1 , .a2 {width:300px; margin-left:20px; margin-top:20px;}
+    .a1 { background-color: rgba(238, 179, 29 , 0.7);}
+    .a2 { background-color: rgba(32, 134, 218 , 0.7);}
+    .a3 { width:620px; background-color: rgba(212, 228, 120, 0.7); margin:20px;}
+
+    .mid , .bottom{text-align: center;}
+    .articleHold , .desc{width:1000px; min-height: 10px; margin:10px auto;}
+    .articleHold > article {width:280px; border:1px solid #888; padding:10px;  height:200px; margin-left:25px;}
+
+
+    .imgCon {width:118px; height:122px; border:1px solid #888; margin:2px;}
+
+    footer {min-height: 200px; background-color: #333; margin-top:50px;}
+    </style>
+</head>
+<body>
+
+    <main class="wrapper">
+        <header>
+            <figure> <figcaption><b>Agoda</b></figcaption>    </figure>
+            <nav>
+                <ul>
+                    <li>Accomodations</li>
+                    <li>Flights</li>
+                    <li>Airports transfer</li>
+                    <li>Deals</li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <section class="top clear">
+            <div class="col-1 float--left">
+                <h1>HOTELS, RESORTS, HOSTELS & MORE</h1>
+                <h3>Get the best prices on 2,000,000+ properties, worldwide</h3>
+                <form class="clear form">
+                    <input class="float--left" type="text" placeholder="Enter destination"/>
+                    <input class="float--left" type="text" placeholder="Enter day"/>
+                    <select class="float--left" name="" id="">
+                        <option value="">option-1</option>
+                        <option value="">option-2</option>
+                        <option value="">option-3</option>
+                        <option value="">option-4</option>
+                    </select>
+                    <input class="float--left" type="button" value="submit"/>
+                </form>
+                <br/>
+            </div>
+            <div class="col-2 float--left  clear">
+                <article class="a1 float--left"></article>
+                <article class="a2 float--left"></article>
+                <article class="a3 float--left"></article>
+            </div>
+
+
+        </section>
+<br/>
+        <section class="mid">
+            <h2>Overheard from travelers</h2>
+            <div class="articleHold clear ">
+                <article class="float--left">
+                    <h2>lorem ipsum dolor</h2>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam hic cupiditate neque voluptates amet minus obcaecati in laboriosam dolorem ea numquam aut, itaque nisi. Esse minus magni voluptatibus similique pariatur!</article>
+                <article class="float--left">
+                        <h2>lorem ipsum dolor</h2>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui hic sed eum doloremque at cupiditate, beatae deserunt dignissimos similique officia, numquam veritatis vero molestiae ex et quo adipisci obcaecati molestias!</article>
+                <article class="float--left">
+                        <h2>lorem ipsum dolor</h2>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit reiciendis illum voluptatum! Culpa autem accusamus officia iste! Impedit nemo reiciendis aut recusandae! Quia consequuntur rerum, earum obcaecati minus ullam at?</article>
+            </div>
+        </section>
+
+        <section class="bottom">
+            <h1>Most popular destinations</h1>
+            <div class="clear desc">
+                <article class="imgCon float--left"></article>
+                <article class="imgCon float--left"></article>
+                <article class="imgCon float--left"></article>
+                <article class="imgCon float--left"></article>
+                <article class="imgCon float--left"></article>
+                <article class="imgCon float--left"></article>
+                <article class="imgCon float--left"></article>
+                <article class="imgCon float--left"></article>
+            </div>
+        </section>
+
+        <footer>
+
+        </footer>
+    </main>
+    
+</body>
+</html>

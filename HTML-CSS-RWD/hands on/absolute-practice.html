@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test position</title>
+
+    <style>
+    *{ margin:0; padding:0;}
+    
+    div { width:200px; margin:200px auto; height:400px;}
+    section{ width:100px; height:100px; color:#fff; outline:2px solid rgb(128, 224, 128); padding:10px; position: absolute;}
+    
+    .s2 {outline: 2px solid red; position:relative;} 
+    .s2--1 {top:-90px; left: -90px;}
+    .s2--2 {top:-90px; right: -90px;}
+    .s2--3 {bottom:-90px; left: -90px;}
+    .s2--4 {bottom:-90px; right: -90px;}
+    </style>
+</head>
+<body> <p>scenario create boxes and arrange like chess board rectangles using position absolute , relative</p>
+
+    <div>
+        
+        <section class="s2">
+        <section class="s2--1"></section>
+        <section class="s2--2"></section>
+        <section class="s2--3"></section>
+        <section class="s2--4"></section>
+    </section>
+    </div>
+    
+</body>
+</html>

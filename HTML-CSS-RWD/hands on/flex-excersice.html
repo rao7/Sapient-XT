@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculator using flex</title>
+    <style>
+    * {margin:0; padding:0;}
+
+    main {  width:300px ; height:300px; margin: 0 auto; box-shadow:1px 1px 10px #ddd; }
+    main > section:first-child {border:1px solid #111; height:40px;}
+    main > section {display:flex; flex-direction: row; flex-wrap: wrap; margin-top:20px;}
+    section >span {border:1px solid #ddd; color:#666; padding:5px; 
+    margin:5px; flex:50px; display: inline-block; text-align: center;}
+
+    </style>
+</head>
+<body>
+    
+<main>
+    <section>
+
+    </section>
+
+    <section>
+        <span class="btn-1">1</span>
+        <span class="btn-2">2</span>
+        <span class="btn-3">3</span>
+        <span class="btn-3">*</span>
+        <span class="btn-4">4</span>
+        <span class="btn-5">5</span>
+        <span class="btn-6">6</span>
+        <span class="btn-3">%</span>
+        <span class="btn-7">7</span>
+        <span class="btn-8">8</span>
+        <span class="btn-9">9</span>
+        <span class="btn-3">-</span>
+        <span class="btn-10">0</span>
+        <span class="btn-10">.</span>
+        <span class="btn-8">+</span>
+        
+        <span class="btn-10">=</span>
+
+    </section>
+
+</main> 
+
+</body>
+</html>

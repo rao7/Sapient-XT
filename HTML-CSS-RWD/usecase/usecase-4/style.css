@@ -1,0 +1,7 @@
+* {margin:0; padding:0;}
+
+    main {  width:290px ; height:300px; margin: 0 auto; box-shadow:1px 1px 10px #ddd; }
+    main > section:first-child {border:1px solid #111; height:40px;}
+    main > section {display:flex; flex-direction: row; flex-wrap: wrap; margin-top:20px;}
+    section >button {border:1px solid #ddd; color:#666; padding:5px; 
+    margin:5px; flex:50px; display: inline-block; text-align: center;}
