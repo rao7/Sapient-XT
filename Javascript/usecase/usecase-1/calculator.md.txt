@@ -1,0 +1,20 @@
+create a console based calculator in which operator and operands are passed as arguuments and opput displays in console intsels
+
+
+outcome in console:
+
+calculator('+',"9",4); //missing number entered string or other
+
+
+calculator('',"9",4); // missing operator
+
+
+calculator('*',7,4);
+  // Multiplication is 28
+
+
+calculator('/',7,4);
+ // Division is 1.75 
+
+calculator('+',7,4);
+ // sum is 11 

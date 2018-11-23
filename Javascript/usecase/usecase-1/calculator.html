@@ -1,0 +1,28 @@
+<p>calculator with javascript please see console and call calculator(operator , arguments)</p>
+    <script>
+    
+    let action ;
+
+    const calculator = function(action , a , b){
+            if(action){
+                
+                    if(typeof(a)=== 'number' && typeof(b) === 'number'){ 
+                        switch(action){
+                            case '+' : let sum = a + b; console.log( `Sum is ${sum} `);  break;
+                            case '-' : let sub = a - b; console.log( `Substraction is ${sub} `);  break;
+                            case '*' : let mul = a * b; console.log( `Multiplication is ${mul} `);  break;
+                            case '/' : let div = a / b;  console.log( `Division is ${div} `);  break;
+                            case '%' : let rem = a % b; console.log( `Remainder is ${rem} `);  break;
+                            default : console.log( `unknown operation rule `); break;
+                         
+                         }
+                    }else { console.log('missing number entered string or other')}
+
+            }else { console.log('missing operator');}
+    }
+
+    
+    
+    
+    
+    </script>
