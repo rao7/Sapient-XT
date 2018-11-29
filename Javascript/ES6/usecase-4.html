@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo app</title>
+</head>
+<body>
+
+   create a todo app 
+<script>
+
+
+class Todo {
+    constructor(title, date) {
+        const formattedDate = date.getDate();
+        Todo.nextId++;
+        this.id = Todo.nextId; // auto_increment
+        this.title = title;
+        this.completed = false;
+        this.date = formattedDate;
+    }
+}
+Todo.nextId = 0;
+
+// Todo Service
+class TodosService {
+    constructor() {
+        this.todos = [];
+    }
+
+    // add new todo with given title
+    addTodo(title) {
+        const todo = new Todo(title, new Date());
+        this.todos.push(todo);
+        return this.todos;
+    }
+
+    // edit todo of given id with new title
+    editTodo(id, newTitle) {
+        const todo = this.findTodo(id);
+        if(todo) {
+            todo.title = newTitle;
+            return todo;
+        }
+    }
+
+    // find todo based on todo id
+    findTodo(id) {
+        const todo = this.todos.find((todo) => todo.id === id);
+        (todo) ?  todo  :  console.log('Todo id not found');
+        
+    }
+
+    // mark todo as complete for given id
+    completeTodo(id) {
+        const todo = this.findTodo(id);
+        
+        if(todo) {
+            todo.completed = true;
+            return todo;
+        }
+    }
+
+    // mark all todos as completed
+    completeAll() {
+        this.todos.forEach((todo) => todo.completed = true);
+        return this.todos;
+    }
+
+    // delete todo of gien id
+    deleteTodo(id) {
+        const todo = this.findTodo(id);
+        if(todo) {
+            const index = this.todos.indexOf(todo);
+            this.todos.splice(index, 1);
+            return this.todos;
+        }
+    }
+
+    // mark all todos as uncompleted
+    clearCompleted() {
+        this.todos.forEach(todo => todo.completed = false);
+        return this.todos;
+    }
+
+    // view todos with filter of completed or uncompleted
+    viewTodos(filter) {
+        const filterCompleted = filter === 'completed' ? true : false;
+        return this.todos.filter((todo) => todo.completed === filterCompleted );
+    }
+}
+
+// todo service instance
+const service = new TodosService();
+
+// api sample
+service.addTodo('Call friend at 8');
+service.addTodo('bring milk');
+service.addTodo('recharge tv');
+service.completeTodo(1);
+service.addTodo('purchase pen');
+
+
+
+
+
+</script>    
+</body>
+</html>
