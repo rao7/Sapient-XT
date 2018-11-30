@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>todo app with api call</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+
+class ProfileComponent {
+    constructor(id, name ,city) {
+        this.id = id;
+        this.name = name;
+        this.city = city;
+    }
+}
+
+const APIURL = 'http://localhost:3000/profile/';
+
+// Todo Service
+class ProfileService {
+    constructor() {
+        
+  
+    }
+
+    async  getProfile(id){
+
+    try{
+
+        const getUsers = uid =>{
+            if(uid){
+                return  fetch (APIURL+uid);
+            }else{
+                return  fetch (APIURL);
+            }
+        
+    }
+
+       getUsers(id).then( res => res.json())
+        .then(body => { console.log(JSON.stringify(body)); })
+    
+    }
+    catch(err){
+        console.log(err)
+    }
+
+    }
+
+
+
+
+    // add new todo with given title
+    async  addProfile(id,name,city) {
+        const newEntry = new ProfileComponent(id,name,city); 
+        let data = JSON.stringify(newEntry);
+        console.log(APIURL);
+        fetch(APIURL, {
+         method: 'POST',
+         body: data, 
+            headers:{
+          'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+        .then(response => console.log('Success:', JSON.stringify(response)))
+        .catch(error => console.error(error));
+
+    }
+
+    
+}
+
+// todo service instance
+const service = new ProfileService();
+service.getProfile(); // returns all profiles
+
+
+// api sample
+//service.addProfile('3','regon','mexico'); // insert or put profiles
+
+//service.getProfile(3); // geting profile by id
+
+
+
+
+
+
+
+</script>
+
+
+1.install mock setver
+2. add service class
+
+model 
+class profile{
+
+id, name, city
+
+}
+
+
+service
+class ProfileService{
+
+constructor(){}
+
+
+async save(){
+fetch(APIURL)
+return response
+
+}
+
+
+}
+
+findAll(){} // return all profiles
+
+findByID(){} // find by id
+
+remove(id){}
+
+class ProfileComponent(){
+
+
+}
