@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom event </title>
+</head>
+<body>
+        <button>yu</button>
+    <script>
+        // quiz
+
+        const component = {
+            sayHello :function(name){
+                alert(name);
+            }
+        }
+        
+        const name = 'rahul';
+
+
+        const btn = document.querySelector('button');
+        console.log(btn)
+         btn.addEventListener('click' , function(){
+            component.sayHello().bind(name);
+         });
+        
+        </script>
+
+       
+    
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* line 6, C:/Users/rahrao/Desktop/session/week4/handson/style/sass/style.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 8, C:/Users/rahrao/Desktop/session/week4/handson/style/sass/style.scss */
+body {
+  font: normal 1em "Helvetica";
+  color: #007bff;
+}
+
+/* line 29, C:/Users/rahrao/Desktop/session/week4/handson/style/sass/style.scss */
+.bdr-1, .container, .row__col--4 {
+  border: 1px solid #ddd;
+}
+
+/* line 30, C:/Users/rahrao/Desktop/session/week4/handson/style/sass/style.scss */
+.clear, .container__row:after {
+  clear: both;
+}
+
+/* line 31, C:/Users/rahrao/Desktop/session/week4/handson/style/sass/style.scss */
+.container {
+  min-height: 20px;
+  width: 90%;
+  margin: 2% auto;
+}
+
+/* line 37, C:/Users/rahrao/Desktop/session/week4/handson/style/sass/style.scss */
+.container__row {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 45em) {
+  /* line 37, C:/Users/rahrao/Desktop/session/week4/handson/style/sass/style.scss */
+  .container__row {
+    flex-direction: column;
+  }
+}
+
+/* line 41, C:/Users/rahrao/Desktop/session/week4/handson/style/sass/style.scss */
+.container__row:after {
+  content: "";
+  display: block;
+}
+
+/* line 56, C:/Users/rahrao/Desktop/session/week4/handson/style/sass/style.scss */
+.row__col--4 {
+  flex-basis: calc(100% / 3);
+  padding: 0.75em;
+}
+
+@media screen and (max-width: 45em) {
+  /* line 56, C:/Users/rahrao/Desktop/session/week4/handson/style/sass/style.scss */
+  .row__col--4 {
+    flex-basis: 100%;
+  }
+}
+
+/* line 71, C:/Users/rahrao/Desktop/session/week4/handson/style/sass/style.scss */
+.calc {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border-width: 5px;
+  border-style: solid;
+  border-top-color: #cfcfcf;
+  border-left-color: #b3b3b3;
+  border-right-color: #444;
+  border-bottom-color: #444;
+  background-color: #b1b1b1;
+}
+
+/* line 76, C:/Users/rahrao/Desktop/session/week4/handson/style/sass/style.scss */
+.calc > input[type="text"]:first-child {
+  border: 1px solid #111;
+  width: 100%;
+  padding: 10px;
+  box-sizing: inherit;
+}
+
+/* line 79, C:/Users/rahrao/Desktop/session/week4/handson/style/sass/style.scss */
+.calc > section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* line 81, C:/Users/rahrao/Desktop/session/week4/handson/style/sass/style.scss */
+section > span {
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px #444;
+  background-color: #555;
+  margin: 5px;
+  flex: 50px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* line 84, C:/Users/rahrao/Desktop/session/week4/handson/style/sass/style.scss */
+.brand {
+  color: #ddd;
+  font-weight: 700;
+  text-align: center;
+}
+
+/*# sourceMappingURL=../css/style.map */

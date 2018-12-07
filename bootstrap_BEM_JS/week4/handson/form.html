@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form element</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<!-- Task
+
+hands on:
+
+1. checkbox
+2. radio
+3. select
+
+
+Add control, read its values 
+ccheckbox you need to get multiple values
+radio: only one should be selected, and gets its value
+select: you should get selected value
+-->
+    <div class="container">
+        <fieldset  class="row ">
+                <legend class="my-4 ml-3">registration</legend>
+            <form action="get" id="registration-form">
+                <div class="form-group mt-3 col-md-4">
+                <label for="f--er5" >Name:</label>
+                    <input type="text" name="" id="f--er5" class="form-control ">
+              </div>
+          
+              <div class="form-group mt-3 col-md-4">
+                    <label for="f--mailID" >Email:</label>
+                        <input type="email" name="" id="f--mailID" class="form-control ">
+                  </div>
+                
+                  <div class="form-group mt-3 col-md-4">
+                        <label for="f--gender-male">male:</label>
+                            <input type="radio"  group="gender" id="f--gender-male" value="male"/>
+                            <label for="gender-female">female:</label>
+                            <input type="radio"  group="gender" id="f--gender-female" value="female"/>
+                      </div>
+                      <div class="form-group mt-3 col-md-4">
+                            <label >documents of ID proof:</label><br/>
+                               <lable for="adhar">adhaar</lable> 
+                               <input type="checkbox" name="idProof" group="idproof" id="f--adhar" value="adhaar"/>
+                               &nbsp;
+                               <lable for="passport">passport</lable>  
+                               <input type="checkbox" group="idproof" name="idProof" id="f--passport" value="passport"/>
+                          </div>
+                      <div class="form-group mt-3 col-md-4">
+                            <label for="f--city" >city:</label>
+                                <select name="" id="f--city" class="form-control">
+                                    <option value="city-1">city-1</option>
+                                    <option value="city-2">city-2</option>
+                                    <option value="city-3">city-3</option>
+                                </select>
+                     </div>
+                          <div class="form-group mt-3 col-md-4">
+                              <button class="btn btn-primary w-100">submit</button>
+                            </div>
+
+        </form>
+        </fieldset>
+    </div>
+    <script>
+
+        
+
+  
+            document.getElementById('registration-form').addEventListener('submit',function(e){ //alert('submitted')
+            e.preventDefault(); 
+            const targetele = e.target;
+            console.log(e)
+            for(i=0; i< targetele.length; i++){
+                if(targetele[i].nodeName == 'INPUT'){ 
+                if(targetele[i].type == 'checkbox' || targetele[i].type == 'radio' ){ 
+                    if(targetele[i].checked === true){ console.log(targetele[i].value);}
+                    else{ console.log(targetele[i].name); }
+                   
+                    
+                }else{
+                    console.log(targetele[i].value);
+                }
+            }if(targetele[i].nodeName == 'SELECT'){
+                console.log(targetele[i].value);
+            }
+
+                
+            }
+         
+            
+                return false;
+           
+            });
+
+        
+            
+            
+            </script>
+    
+</body>
+</html>
